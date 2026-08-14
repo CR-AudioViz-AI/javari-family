@@ -224,7 +224,7 @@ export default function FamilyPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Join Our Community</h2>
           <p className="text-xl text-gray-300 mb-8">Connect with parents and access expert resources</p>
-          <a href="/signup" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-cyan-900 font-semibold rounded-xl hover:bg-gray-100 transition">
+          <a href="https://craudiovizai.com/signup" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-cyan-900 font-semibold rounded-xl hover:bg-gray-100 transition">
             <Heart className="w-5 h-5" />
             Join Free Today
           </a>
