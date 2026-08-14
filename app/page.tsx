@@ -203,9 +203,8 @@ export default function FamilyPage() {
 
           <div className="flex flex-wrap justify-center gap-4">
             {topics.map((topic, i) => (
-              <motion.a
+              <motion.div
                 key={i}
-                href={`/topics/${topic.name.toLowerCase()}`}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.05 }}
@@ -213,7 +212,7 @@ export default function FamilyPage() {
               >
                 <span className="text-white font-medium">{topic.name}</span>
                 <span className="text-gray-500 ml-2">{topic.count}</span>
-              </motion.a>
+              </motion.div>
             ))}
           </div>
         </div>
