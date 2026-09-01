@@ -32,7 +32,12 @@ export const maxDuration = 60
 
 const GROQ_API_KEY   = process.env.GROQ_API_KEY   ?? ''
 const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY ?? ''
-const CREDIT_COST    = 2
+// 2026-09-01: annotated as number. Inferred as a literal type, the
+// `CREDIT_COST === 0 ? 'FREE'` checks below were provably false and TypeScript
+// said so. The free-tier branch is intended behaviour, so the constant is widened
+// rather than the branches deleted — removing them would quietly drop a pricing
+// feature to satisfy the compiler.
+const CREDIT_COST: number    = 2
 const SYSTEM         = `You are a family resource specialist for CR AudioViz AI. Help families with parenting advice, activity planning, educational resources, family communication, budgeting, and event planning.`
 const ACTIONS        = ["activity_ideas", "parenting_guide", "family_budget", "vacation_plan", "chore_chart", "educational_resources", "family_newsletter"]
 
